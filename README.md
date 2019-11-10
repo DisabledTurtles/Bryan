@@ -1,2 +1,191 @@
 # Bryan
-game is bronken
+---- Minecraft Crash Report ----
+// You should try our sister game, Minceraft!
+
+Time: 11/10/19 6:07 PM
+Description: There was a severe problem during mod loading that has caused the game to fail
+
+cpw.mods.fml.common.LoaderException: java.lang.NoClassDefFoundError: fr/toss/common/player/ClientPlayerBaseMagic
+	at cpw.mods.fml.common.LoadController.transition(LoadController.java:163)
+	at cpw.mods.fml.common.Loader.loadMods(Loader.java:544)
+	at cpw.mods.fml.client.FMLClientHandler.beginMinecraftLoading(FMLClientHandler.java:208)
+	at net.minecraft.client.Minecraft.func_71384_a(Minecraft.java:480)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:878)
+	at net.minecraft.client.main.Main.main(SourceFile:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+Caused by: java.lang.NoClassDefFoundError: fr/toss/common/player/ClientPlayerBaseMagic
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at cpw.mods.fml.common.FMLModContainer.gatherAnnotations(FMLModContainer.java:317)
+	at cpw.mods.fml.common.FMLModContainer.constructMod(FMLModContainer.java:505)
+	at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at cpw.mods.fml.common.LoadController.sendEventToModContainer(LoadController.java:212)
+	at cpw.mods.fml.common.LoadController.propogateStateMessage(LoadController.java:190)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at cpw.mods.fml.common.LoadController.distributeStateMessage(LoadController.java:119)
+	at cpw.mods.fml.common.Loader.loadMods(Loader.java:513)
+	... 10 more
+Caused by: java.lang.ClassNotFoundException: fr.toss.common.player.ClientPlayerBaseMagic
+	at net.minecraft.launchwrapper.LaunchClassLoader.findClass(LaunchClassLoader.java:191)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 36 more
+Caused by: java.lang.NoClassDefFoundError: api/player/client/ClientPlayerBase
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:760)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at net.minecraft.launchwrapper.LaunchClassLoader.findClass(LaunchClassLoader.java:182)
+	... 38 more
+Caused by: java.lang.ClassNotFoundException: api.player.client.ClientPlayerBase
+	at net.minecraft.launchwrapper.LaunchClassLoader.findClass(LaunchClassLoader.java:101)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 42 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_51, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 839495256 bytes (800 MB) / 1260912640 bytes (1202 MB) up to 3008888832 bytes (2869 MB)
+	JVM Flags: 4 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xmx3228m -Xms256m -XX:PermSize=256m
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1614 106 mods loaded, 106 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UC	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UC	FML{7.10.99.99} [Forge Mod Loader] (forge-1.7.10-10.13.4.1614-1.7.10.jar) 
+	UC	Forge{10.13.4.1614} [Minecraft Forge] (forge-1.7.10-10.13.4.1614-1.7.10.jar) 
+	UC	CodeChickenCore{1.0.7.47} [CodeChicken Core] (minecraft.jar) 
+	UC	NotEnoughItems{1.0.5.120} [Not Enough Items] (NotEnoughItems-1.7.10-1.0.5.120-universal.jar) 
+	UC	OpenEye{0.8} [OpenEye] (OpenEye-1.7.10-0.8.jar) 
+	UC	OpenModsCore{0.10.1} [OpenModsCore] (minecraft.jar) 
+	UC	battlegear2{1.7.10} [Mine & Blade Battlegear 2 - Bullseye] (1.7.10-MB_Battlegear2-Bullseye-1.0.8.3.jar) 
+	UC	zeldaswordskills{1.7.10-2.5.1} [Zelda Sword Skills] (1.7.10-zeldaswordskills-2.5.1.jar) 
+	UC	DamageIndicatorsMod{3.3.2} [Damage Indicators] ([1.7.10]DamageIndicatorsMod-3.3.2.jar) 
+	UC	bspkrsCore{6.16} [bspkrsCore] ([1.7.10]bspkrsCore-universal-6.16.jar) 
+	UC	FloatingRuins{1.7.10.r02} [FloatingRuins] ([1.7.10]FloatingRuins-universal-1.7.10.r02.jar) 
+	UC	adventurebackpack{1.7.10-0.8b} [Adventure Backpack] (adventurebackpack-1.7.10-0.8c.jar) 
+	UC	nevermine{Tslat-1.1.3} [Advent of Ascension] (AoA-Tslat-1.1.3.jar) 
+	UC	Backpack{2.0.1} [Backpack] (backpack-2.0.1-1.7.x.jar) 
+	UC	iChunUtil{4.2.3} [iChunUtil] (iChunUtil-4.2.3.jar) 
+	UC	BackTools{4.0.0} [BackTools] (BackTools-4.0.0.jar) 
+	UC	BattleTowers{1.5.1} [Battle Towers] (BattleTowers-1.7.10.jar) 
+	UC	blockarmor{1.1} [Block Armor] (BlockArmor-1.7.10-1.1.jar) 
+	UC	bonetorch{0.0.1.20151209052122} [Bone Torch Mod] (BoneTorch-1.7.10-0.0.1b1-universal.jar) 
+	UC	candycraftmod{Beta 1.3} [CandyCraft] (CandyCraft-1.3.jar) 
+	UC	chancecubes{1.7.10-2.4.1.0} [Chance Cubes] (ChanceCubes-1.7.10-2.4.1.182.jar) 
+	UC	chococraft{4.1.5} [Clienthax's ChocoCraft] (ChocoCraft-4.1.5.jar) 
+	UC	coloredchests{0.0.1.20151209060506} [Colored Chests] (ColoredChests-1.7.10-0.0.1b2.jar) 
+	UC	customnpcs{1.7.10d} [CustomNpcs] (CustomNPCs_1.7.10d(29oct17).jar) 
+	UC	CustomPets{1.0.5} [Custom Pets] (custompets-1.7.10-1.0.5-universal.jar) 
+	UC	DeathCounter{4.0.0} [DeathCounter] (DeathCounter-4.0.0.jar) 
+	UC	PTRModelLib{1.0.0} [PTRModelLib] (Decocraft-2.4.2_1.7.10.jar) 
+	UC	props{2.4.2} [Decocraft] (Decocraft-2.4.2_1.7.10.jar) 
+	UC	jtcoremod{1.0.0.0} [jtrent238's Core Mod] (DecorativeBlocksMod-1.0.0.2.jar) 
+	UC	decorationmod{1.0.0.2} [§2jtrent238's Decoration Mod] (DecorativeBlocksMod-1.0.0.2.jar) 
+	UC	dimensionalcake{0.0.1} [Dimensional Cake] (dimensionalcakes-0.0.1.jar) 
+	UC	doggytalents{1.14.2.317} [Doggy Talents] (DoggyTalents-1.7.10-1.14.2.317-universal.jar) 
+	UC	dldungeonsjdg{1.11.0.1} [Doomlike Dungeons] (DoomlikeDungeons-1.11.0.1-MC1.7.10.jar) 
+	UC	doritos{1.0.0.0} [jtrent238's Doritos Mod] (doritos-1.0.0.0.jar) 
+	UC	eplus{3.0.2-d} [Enchanting Plus] (EnchantingPlus-1.7.10-3.0.2-d.jar) 
+	UC	endercore{1.7.10-0.2.0.39_beta} [EnderCore] (EnderCore-1.7.10-0.2.0.39_beta.jar) 
+	UC	epicproportionsmod{1.5.9.13} [jtrent238's EpicProportions Mod] (epicproportionsmod-1.5.9.13.jar) 
+	UC	epicproportionsmod_christmas{1.0.2.0} [jtrent238's EpicProportions Mod - Christmas Addon] (epicproportionsmod_christmas-1.0.2.0.jar) 
+	UC	epicproportionsmod_halloween{1.0.1.2} [jtrent238's EpicProportions Mod - Halloween Addon] (epicproportionsmod_halloween-1.0.1.2.jar) 
+	UC	golems{1.20} [Extra Golems] (Extra-Golems[1.7.10]-1.20.jar) 
+	UC	FunOres{1.0.3b} [Fun Ores] (FunOres-1.7.10-1.0.3b-12.jar) 
+	UC	hammermod{1.1.3.10} [Hammer Mod] (hammermod-1.1.3.10.jar) 
+	UC	HardcoreEnderExpansion{1.8.6} [Hardcore Ender Expansion] (HardcoreEnderExpansion  MC-1.7.10  v1.8.6.jar) 
+	UC	Hats{4.0.1} [Hats] (Hats-4.0.1.jar) 
+	UC	headcrumbs{1.7.4} [Headcrumbs] (Headcrumbs-1.7.4.jar) 
+	UC	InfernalMobs{1.6.0} [Infernal Mobs] (InfernalMobs-1.7.10.jar) 
+	UC	InventoryPets{1.5.2} [Inventory Pets] (inventorypets-1.7.10-1.5.2-universal.jar) 
+	UC	IronChest{6.0.62.742} [Iron Chest] (ironchest-1.7.10-6.0.62.742-universal.jar) 
+	UC	jtrent238drinks{1.0.0.1} [jtrent238's Drinks Mod] (jtrent238drinks-1.0.0.1.jar) 
+	UC	jtrent238youtubers{1.0.2.2} [jtrent238's YouTuber Mod] (jtrent238youtubers-1.0.2.2.jar) 
+	UC	lootbags{2.0.17} [Loot Bags] (LootBags-1.7.10-2.0.17.jar) 
+	UC	lostrecords{1.0.0.0} [jtrent238's Lost Records Mod] (lostrecords-1.0.0.0.jar) 
+	UC	luckyblock{1.0.2.3} [jtrent238's Lucky Block Mod] (luckyblock-1.0.2.3.jar) 
+	UC	lycanitesmobs{1.13.0.5 - MC 1.7.10} [Lycanites Mobs] (LycanitesMobsComplete 1.13.0.5 [1.7.10].jar) 
+	UC	arcticmobs{1.13.0.5 - MC 1.7.10} [Lycanites Arctic Mobs] (LycanitesMobsComplete 1.13.0.5 [1.7.10].jar) 
+	UC	demonmobs{1.13.0.5 - MC 1.7.10} [Lycanites Demon Mobs] (LycanitesMobsComplete 1.13.0.5 [1.7.10].jar) 
+	UC	desertmobs{1.13.0.5 - MC 1.7.10} [Lycanites Desert Mobs] (LycanitesMobsComplete 1.13.0.5 [1.7.10].jar) 
+	UC	forestmobs{1.13.0.5 - MC 1.7.10} [Lycanites Forest Mobs] (LycanitesMobsComplete 1.13.0.5 [1.7.10].jar) 
+	UC	freshwatermobs{1.13.0.5 - MC 1.7.10} [Lycanites Freshwater Mobs] (LycanitesMobsComplete 1.13.0.5 [1.7.10].jar) 
+	UC	infernomobs{1.13.0.5 - MC 1.7.10} [Lycanites Inferno Mobs] (LycanitesMobsComplete 1.13.0.5 [1.7.10].jar) 
+	UC	junglemobs{1.13.0.5 - MC 1.7.10} [Lycanites Jungle Mobs] (LycanitesMobsComplete 1.13.0.5 [1.7.10].jar) 
+	UC	mountainmobs{1.13.0.5 - MC 1.7.10} [Lycanites Mountain Mobs] (LycanitesMobsComplete 1.13.0.5 [1.7.10].jar) 
+	UC	plainsmobs{1.13.0.5 - MC 1.7.10} [Lycanites Plains Mobs] (LycanitesMobsComplete 1.13.0.5 [1.7.10].jar) 
+	UC	saltwatermobs{1.13.0.5 - MC 1.7.10} [Lycanites Saltwater Mobs] (LycanitesMobsComplete 1.13.0.5 [1.7.10].jar) 
+	UC	shadowmobs{1.13.0.5 - MC 1.7.10} [Lycanites Shadow Mobs] (LycanitesMobsComplete 1.13.0.5 [1.7.10].jar) 
+	UC	swampmobs{1.13.0.5 - MC 1.7.10} [Lycanites Swamp Mobs] (LycanitesMobsComplete 1.13.0.5 [1.7.10].jar) 
+	UE	magiccrusade{2.0.0} [Magic Crusade] (magiccrusade-1.0.jar) 
+	UC	malisiscore{1.7.10-0.14.3} [MalisisCore] (malisiscore-1.7.10-0.14.3.jar) 
+	UC	malisisdoors{1.7.10-1.13.2} [Malisis' Doors] (malisisdoors-1.7.10-1.13.2.jar) 
+	UC	obscore{1.4.1} [ObsCore] (obscore-1.4.1_mc1.7.10.jar) 
+	UC	obstrophiesaoa{1.6.0} [ObsTrophies] (obstrophies-1.6.0_mc1.7.10.jar) 
+	UC	moretrophies{1.0.2.6} [jtrent238's More Trophies Mod] (moretrophies-1.0.2.6.jar) 
+	UC	Morph{0.9.3} [Morph] (Morph-Beta-0.9.3.jar) 
+	UC	notenoughcats{1.2.1} [Not Enough Cats] (NotEnoughCats-1.7.10-1.2.1.jar) 
+	UC	neresources{0.1.0.ManuallyBuilt} [Not Enough Resources] (NotEnoughResources-1.7.10-0.1.0-122.jar) 
+	UC	ogpig{1.0.0.0} [OGPig: Birth of the creeper] (ogpig-1.0.0.0.jar) 
+	UC	OpenMods{0.10.1} [OpenMods] (OpenModsLib-1.7.10-0.10.1.jar) 
+	UC	OpenBlocks{1.6} [OpenBlocks] (OpenBlocks-1.7.10-1.6.jar) 
+	UC	oredictmaster{1.0.0.0} [OreDictionary Master] (OreDictionaryMaster-1.0.0.0.jar) 
+	UC	OresPlus{0.7.3.41B} [OresPlus] (OresPlus-0.7.3.41B.jar) 
+	UC	harvestthenether{1.7.10} [Pam's Harvest the Nether] (Pam's Harvest the Nether 1.7.10a.jar) 
+	UC	simplerecipes{1.7.10a} [Pam's Simple Recipes] (Pam's Simple Recipes 1.7.10a.jar) 
+	UC	redcow{0.0.1.2} [Red Cow] (RedCow-1.7.10-0.0.1b2-universal.jar) 
+	UC	Roguelike{1.5.0} [Roguelike Dungeons] (roguelike-1.7.10-1.5.0b.jar) 
+	UC	bagableplants{0.0.1.20170106233857} [Bagable Plants] (SBM-BagablePlants-1.7.10-0.0.1b20170106233857-dev-universal.jar) 
+	UC	cactibucket{0.0.1.20170105151347} [Cacti Bucket] (SBM-CactiBucket-1.7.10-0.0.1b20170105151347-dev-universal.jar) 
+	UC	cardboardboxes{0.0.1.5} [Cardboard Boxes] (SBM-CardboardBoxes-1.7.10-0.0.1b5-universal.jar) 
+	UC	vefluids{0.1.1.17} [VoltzEngine Fluids module] (VE-FluidHandling-1.7.10-0.1.1b17.jar) 
+	UC	sbmgascan{1.0.1.2} [Gas Can] (SBM-GasCan-1.7.10-1.0.1b2-universal.jar) 
+	UC	smbgrapplinghook{0.1.0.20170514023901} [Grappling Hook] (SBM-GrapplingHook-1.7.10-0.1.0b20170514023901.jar) 
+	UC	helmbucket{0.0.1.5} [Helm Bucket] (SBM-HelmBucket-1.7.10-0.0.1b5-universal.jar) 
+	UC	smbmagicmirror{0.0.1.13} [SMB Magic Mirror] (SBM-Magic-Mirror-1.7.10-0.0.1b13-universal.jar) 
+	UC	sbmoilore{0.1.0.20170512184405} [Oil Ore] (SBM-OilOre-1.7.10-0.1.0b20170512184406.jar) 
+	UC	woodenshears{0.0.1.4} [Wooden Shears] (SBM-WoodenShears-1.7.10-0.0.1b4-universal.jar) 
+	UC	thebetweenlands{1.0.6-alpha} [The Betweenlands] (TheBetweenlands-1.0.6-alpha-universal.jar) 
+	UC	TwilightForest{2.3.7} [The Twilight Forest] (twilightforest-1.7.10-2.3.7.jar) 
+	UC	VillageNames{3.2.1} [Village Names] (VillageNames-1.7.10-3.2.1.jar) 
+	UC	Waila{1.5.10} [Waila] (Waila-1.5.10_1.7.10.jar) 
+	UC	wailafeatures{0.1.0} [WAILA-features] (WAILA-features-1.7.10-0.1.0.jar) 
+	UC	WailaHarvestability{1.1.6} [Waila Harvestability] (WailaHarvestability-mc1.7.10-1.1.6.jar) 
+	UC	wailaplugins{MC1.7.10-0.2.0-25} [WAILA Plugins] (WAILAPlugins-MC1.7.10-0.2.0-25.jar) 
+	UC	waystones{1.0.12} [Waystones] (Waystones-mc1.7.10-1.0.12.jar) 
+	UC	woodenbucket{0.0.3.9} [Wooden Bucket] (WoodenBucket-1.7.10-0.0.3b9-universal.jar) 
+	UC	woodenrails{0.0.1.20150806142027} [Wooden Rails] (WoodenRails-1.7.10-0.0.1b1.jar) 
+	UC	zssaddon{1.7.10-alpha-0.0.5-2} [Zelda Sword Skills - Addon] (zeldaswordskillsaddon-v0.0.6.jar) 
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 436.48' Renderer: 'GeForce GTX 1660 Ti/PCIe/SSE2'
+	OpenModsLib class transformers: [stencil_patches:FINISHED],[movement_callback:FINISHED],[player_damage_hook:FINISHED],[map_gen_fix:ENABLED],[gl_capabilities_hook:FINISHED],[player_render_hook:ENABLED]
+	Class transformer null safety: all safe
+  
